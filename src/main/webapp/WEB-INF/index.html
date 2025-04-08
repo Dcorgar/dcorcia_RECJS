@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de la compra</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        label { display: block; margin: 10px 0; }
-        button { margin: 5px; }
-        #lista { margin-top: 15px; }
-    </style>
+<meta charset="UTF-8">
+<title>Lista de la compra</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+}
+
+label {
+	display: block;
+	margin: 10px 0;
+}
+
+button {
+	margin: 5px;
+}
+
+#lista {
+	margin-top: 15px;
+}
+</style>
 </head>
 <body>
 
-    <label>Nombre del producto:<input id="nombre" name="nombre" type="text" oninput="validarNombre()"></label>
-    <label>Coste:<input id="coste" name="coste" type="number" step="0.01"></label>
-    <button onclick="agregarProducto()">Subir</button>
+	<label>Nombre del producto:<input id="nombre" name="nombre"
+		type="text" oninput="validarNombre()"></label>
+	<label>Coste:<input id="coste" name="coste" type="number"
+		step="0.01"></label>
+	<button onclick="agregarProducto()">Subir</button>
 
-    <br>
+	<br>
 	<p>Selecciona un producto:</p>
-    <select name="comprar" id="desplegable"></select>
-    <label>Cantidad del producto:<input id="cuantos" name="cantidad" type="number" step="1" min="1" oninput="redondearCantidad()"></label>
-    <button onclick="comprar()">Comprar</button>
-    <button onclick="restarCompra()">Restar</button>
-    <button onclick="quitarCompra()">Quitar</button>
-    <button onclick="iva()">IVA</button>
-    <button onclick="envio()">Enviar</button>
+	<select name="comprar" id="desplegable"></select>
+	<label>Cantidad del producto:<input id="cuantos"
+		name="cantidad" type="number" step="1" min="1"
+		oninput="redondearCantidad()"></label>
+	<button onclick="comprar()">Comprar</button>
+	<button onclick="restarCompra()">Restar</button>
+	<button onclick="quitarCompra()">Quitar</button>
+	<button onclick="iva()">IVA</button>
+	<button onclick="envio()">Enviar</button>
 
-    <h1>Lista de la compra</h1>
-    <ol id="lista"></ol>
+	<h1>Lista de la compra</h1>
+	<ol id="lista"></ol>
 
-    <p>
-        El coste final es <span id="costeFinal"></span>
-    </p>
-    
-    <script src="main.js"></script>
+	<p>
+		El coste final es <span id="costeFinal"></span>
+	</p>
+
+	<script src="main.js"></script>
 </body>
 </html>
